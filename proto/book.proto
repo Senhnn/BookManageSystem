@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "/book";
+
+message Book {
+    string name = 1;
+    string author = 2;
+    repeated string class = 3;
+    string summary = 4;
+}

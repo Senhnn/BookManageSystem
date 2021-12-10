@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option go_package = "/user";
+
+enum PowerLevel {
+    NONE = 0;
+    SIMPLE = 1;
+    MANAGER = 2;
+    GOD = 3;
+}
+
+// 添加用户接口相应消息
+message AddUserResponse {
+    uint32 code = 1;
+    string errMsg = 2;
+}
+
+message User {
+    PowerLevel power_level = 1;
+    string real_name = 2;
+    string age = 3;
+    string account = 4;
+    string user_name = 5;
+}
+
+message AllUsers {
+    repeated User users = 1;
+}
