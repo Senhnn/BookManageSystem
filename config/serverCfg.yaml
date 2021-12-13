@@ -1,0 +1,8 @@
+Server:
+  Ip: "127.0.0.1"
+  Port: "10000"
+
+
+JWT:
+  JwtSigKey: "SyhanLiu19970719"
+  JwtIss: "SyhanLiu"
