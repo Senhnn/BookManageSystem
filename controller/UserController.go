@@ -80,5 +80,15 @@ func UserRegister(c *gin.Context) {
 }
 
 func UserLogin(c *gin.Context) {
+	var loginReq protocal.UserLoginRequest
+	if err := c.ShouldBindJSON(&loginReq); err != nil {
+		c.JSON(http.StatusOK, &protocal.UserLoginResponse{
+			Code:   myerrors.REQ_INFO_INVALID,
+			ErrMsg: err.Error(),
+		})
+		c.Abort()
+		return
+	}
+	// todo 数据库操作
 
 }

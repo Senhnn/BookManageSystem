@@ -18,3 +18,9 @@ type MiddleWareAuthErrResponse struct {
 	Code   uint64 `json:"code"`
 	ErrMsg string `json:"err_msg,omitempty"`
 }
+
+// 用户登录响应
+type UserLoginResponse struct {
+	Code   uint64 `json:"code"`
+	ErrMsg string `json:"err_msg"`
+}

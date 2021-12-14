@@ -10,6 +10,13 @@ var (
 
 	JwtSigKey string
 	JwtIss    string
+
+	// 数据库配置
+	DBUser     string
+	DBPassword string
+	DBHost     string
+	DBPort     string
+	DBName     string
 )
 
 // 设置默认值
@@ -44,4 +51,11 @@ func Init() {
 	// JWT配置
 	JwtSigKey = viper.GetString("JWT.JwtSigKey")
 	JwtIss = viper.GetString("JWT.JwtIss")
+
+	// 数据库配置
+	DBUser = viper.GetString("Mysql.DBUser")
+	DBPassword = viper.GetString("Mysql.DBPassword")
+	DBHost = viper.GetString("Mysql.DBHost")
+	DBPort = viper.GetString("Mysql.DBPort")
+	DBName = viper.GetString("Mysql.DBName")
 }

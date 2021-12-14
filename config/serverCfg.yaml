@@ -6,3 +6,10 @@ Server:
 JWT:
   JwtSigKey: "SyhanLiu19970719"
   JwtIss: "SyhanLiu"
+
+Mysql:
+  DBUser: "syhan"
+  DBPassword: "syhan"
+  DBHost: "127.0.0.1"
+  DBPort: "3306"
+  DBName: "BMS"
