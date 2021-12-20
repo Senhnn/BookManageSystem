@@ -14,7 +14,7 @@ type RegUserRequest struct {
 	Account  string `json:"account" validate:"gte=6,required,lte=12"`
 	Password string `json:"password" validate:"gte=6,required,lte=12"`
 	UserName string `json:"user_name" validate:"lte=20,gte=1"`
-	Age      string `json:"age" validate:"numeric"`
+	Age      int    `json:"age" validate:"numeric"`
 }
 
 // 用户登录请求

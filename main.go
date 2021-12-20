@@ -4,12 +4,15 @@ import (
 	"bookmanagesystem/config"
 	"bookmanagesystem/controller"
 	"bookmanagesystem/middleware/tls"
+	"bookmanagesystem/module"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	// 配置文件初始化读取
 	config.Init()
+	// 数据库初始化
+	module.InitDB()
 
 	httpsSvr := gin.New()
 	httpSvr := gin.New()

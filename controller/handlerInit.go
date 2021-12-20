@@ -21,5 +21,6 @@ func HTTPHandlerInit(httpSvr *gin.Engine) {
 	simpleGroup := httpSvr.Group("/")
 	{
 		simpleGroup.POST("register", UserRegister)
+		simpleGroup.POST("login", UserLogin)
 	}
 }

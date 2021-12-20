@@ -48,7 +48,8 @@ func UserAdd(c *gin.Context) {
 		fmt.Println(err)
 	}
 	c.JSON(http.StatusBadRequest, &protocal.AddUserResponse{
-		Code: myerrors.SUCCESS,
+		Code:   myerrors.SUCCESS,
+		ErrMsg: "",
 	})
 	return
 }
